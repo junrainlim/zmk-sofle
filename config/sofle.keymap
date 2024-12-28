@@ -16,15 +16,15 @@
 / {
     behaviors {
         mmv {
-            acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <900>;    // 0
-            delay-ms = <0>;                   // 0
+            acceleration-exponent = <1>;        // 1
+            time-to-max-speed-ms = <900>;       // 0
+            delay-ms = <0>;                     // 0
         };
 
         msc {
-            acceleration-exponent = <1>;      // 0
-            time-to-max-speed-ms = <400>;      // 500
-            delay-ms = <0>;                   //   10
+            acceleration-exponent = <1>;        // 0
+            time-to-max-speed-ms = <400>;       // 500
+            delay-ms = <0>;                     //   10
         };
     };
 
@@ -41,24 +41,24 @@
 
         layer0 {
             bindings = <
-&kp ESC         &kp N1          &kp N2          &kp N3        &kp N4       &kp N5                   &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp TILDE
-&kp TAB         &kp Q           &kp W           &kp E         &kp R        &kp T                    &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp BACKSPACE   &kp A           &kp S           &kp D         &kp F        &kp G                    &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT       &kp Z           &kp X           &kp C         &kp V        &kp B                    &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE      &kp LEFT_GUI    &kp LCTRL       &kp LEFT_ALT  &kp SPACE    &mo 1                    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC     &kp N1  &kp N2      &kp N3      &kp N4      &kp N5              &kp UP                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp LBKT
+&kp TAB     &kp Q   &kp W       &kp E       &kp R       &kp T               &kp DOWN                &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RBKT
+&kp BSPC    &kp A   &kp S       &kp D       &kp F       &kp G               &kp LEFT                &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z   &kp X       &kp C       &kp V       &kp B               &kp RIGHT               &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHIFT
+&kp C_MUTE          &kp LGUI    &kp LCTRL   &kp LALT    &kp SPACE   &mo 1   &kp ENTER   &kp RALT    &kp ENTER   &kp RCTRL   &kp MINUS   &kp EQUAL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             display-name = "LAYER0";
         };
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5               &mmv MOVE_UP     &kp F6           &kp F7           &kp F8         &kp F9           &kp F10           &kp F11
-&trans      &kp GRAVE        &kp UP_ARROW    &kp DOWN_ARROW   &mkp RCLK        &mkp MB4             &mmv MOVE_DOWN   &kp PG_UP        &kp END          &mmv MOVE_UP   &kp HOME         &kp MINUS         &kp EQUAL
-&kp DELETE  &kp LEFT_ARROW   &trans          &trans           &kp RIGHT_ARROW  &mkp MB5             &mmv MOVE_LEFT   &kp PG_DN        &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI      &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT     &kp F11          &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans               &mkp LCLK        &trans           &trans           &mkp LCLK      &mkp RCLK        &mkp MCLK
+&kp GRAVE   &kp F1              &kp F2      &kp F3      &kp F4          &kp F5              &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9             &kp F10     &kp F11
+&kp BSLH    &kp C_AC_FORWARD    &kp UP      &kp DOWN    &kp C_AC_BACK   &mkp MB4            &mmv MOVE_DOWN          &kp PG_UP       &kp END         &mmv MOVE_UP    &kp HOME           &trans      &trans
+&kp DELETE  &kp LEFT            &kp PG_UP   &kp PG_DN   &kp RIGHT       &mkp MB5            &mmv MOVE_LEFT          &kp PG_DN       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans      &trans
+&trans      &trans              &trans      &trans      &trans          &trans              &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans             &trans      &trans
+&trans                          &trans      &trans      &trans          &trans      &trans  &mkp LCLK       &trans  &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
 
             display-name = "layer1";
@@ -70,7 +70,7 @@
 &trans      &trans      &trans      &trans      &trans       &trans                                 &trans           &trans     &trans  &trans      &trans     &trans       &trans
 &trans      &trans      &trans      &trans      &trans       &trans                                 &mmv MOVE_DOWN   &trans     &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
 &trans      &trans      &trans      &trans      &trans       &trans                                 &mmv MOVE_LEFT   &trans     &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans      &trans      &trans      &trans      &trans       &trans                                 &mmv MOVE_RIGHT  &trans     &trans  &sys_reset  &soft_off  &bootloader  &trans
+&trans      &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI       &mmv MOVE_RIGHT  &trans     &trans  &sys_reset  &soft_off  &bootloader  &trans
 &trans      &trans      &trans      &trans      &trans       &trans                                 &mkp LCLK        &trans     &trans  &trans      &trans     &trans
             >;
 

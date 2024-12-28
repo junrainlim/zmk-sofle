@@ -80,10 +80,10 @@ layers:
   - F10
   - F11
   - {t: \, s: '|'}
-  - AC FORWARD
+  - AC BACK
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-down-bold$$
-  - AC BACK
+  - AC FORWARD
   - '&mkp MB4'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PG UP

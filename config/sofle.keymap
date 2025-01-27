@@ -54,11 +54,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1          &kp F2      &kp F3      &kp F4              &kp F5              &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9             &kp F10     &kp F11
-&kp BSLH    &kp C_AC_BACK   &kp UP      &kp DOWN    &kp C_AC_FORWARD    &mkp MB4            &mmv MOVE_DOWN          &kp PG_UP       &kp END         &mmv MOVE_UP    &kp HOME           &trans      &trans
-&kp DELETE  &kp LEFT        &kp PG_UP   &kp PG_DN   &kp RIGHT           &mkp MB5            &mmv MOVE_LEFT          &kp PG_DN       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans      &trans
-&trans      &trans          &trans      &trans      &trans              &trans              &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans             &trans      &trans
-&trans                      &trans      &trans      &trans              &trans      &trans  &mkp LCLK       &trans  &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK
+&kp GRAVE   &kp F1          &kp F2      &kp F3      &kp F4              &kp F5          &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9             &kp F10     &kp F11
+&kp BSLH    &kp C_AC_BACK   &kp UP      &kp DOWN    &kp C_AC_FORWARD    &kp F11         &mmv MOVE_DOWN          &kp PG_UP       &kp END         &mmv MOVE_UP    &kp HOME           &trans      &trans
+&kp DELETE  &kp LEFT        &kp PG_UP   &kp PG_DN   &kp RIGHT           &kp F12         &mmv MOVE_LEFT          &kp PG_DN       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans      &trans
+&trans      &trans          &trans      &trans      &trans              &trans          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans             &trans      &bootloader
+&trans                      &trans      &trans      &trans              &trans  &trans  &mkp LCLK       &trans  &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
 
             display-name = "layer1";
@@ -67,11 +67,11 @@
 
         layer_2 {
             bindings = <
-&trans      &trans      &trans      &trans      &trans       &trans                                 &trans           &trans     &trans  &trans      &trans     &trans       &trans
-&trans      &trans      &trans      &trans      &trans       &trans                                 &mmv MOVE_DOWN   &trans     &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans      &trans      &trans      &trans      &trans       &trans                                 &mmv MOVE_LEFT   &trans     &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans      &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI       &mmv MOVE_RIGHT  &trans     &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans      &trans      &trans      &trans      &trans       &trans                                 &mkp LCLK        &trans     &trans  &trans      &trans     &trans
+&trans      &trans      &trans      &trans      &trans       &trans                             &trans                 &trans  &trans  &trans      &trans     &trans       &trans
+&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_DOWN         &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
+&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_LEFT         &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+&trans      &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI   &mmv MOVE_RIGHT        &trans  &trans  &sys_reset  &soft_off  &bootloader  &bootloader
+&trans      &trans      &trans      &trans      &trans       &trans                             &mkp LCLK       &trans &trans  &trans  &trans       &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;

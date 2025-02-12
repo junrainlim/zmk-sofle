@@ -42,9 +42,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                , <&macro_press &kp LALT>
+                , <&macro_release &kp LCTRL>
                 ;
             };
         };
@@ -68,11 +70,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1          &kp F2      &kp F3      &kp F4              &kp F5          &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10 &kp F11
-&kp BSLH    &kp C_AC_BACK   &trans      &trans      &kp C_AC_FORWARD    &kp F10         &mmv MOVE_DOWN          &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans          &trans  &trans
-&kp DELETE  &kp HOME        &trans      &trans      &kp END             &kp F11         &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans  &trans
-&trans      &kp LEFT        &kp UP      &kp DOWN    &kp RIGHT           &kp F12         &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans          &trans  &bootloader
-&trans                      &trans      &trans      &trans              &trans  &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
+&kp GRAVE   &kp F1          &kp F2  &kp F3      &kp F4              &kp F5          &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
+&kp BSLH    &kp C_AC_BACK   &trans  &trans      &kp C_AC_FORWARD    &kp F10         &mmv MOVE_DOWN          &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans          &trans          &trans
+&kp DELETE  &kp HOME        &trans  &trans      &kp END             &kp F11         &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
+&trans      &kp LEFT        &kp UP  &kp DOWN    &kp RIGHT           &kp F12         &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans          &trans          &bootloader
+&trans                      &trans  &trans      &trans              &trans  &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
             >;
 
             display-name = "layer1";

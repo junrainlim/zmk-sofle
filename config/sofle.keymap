@@ -88,7 +88,7 @@
                 = <&macro_press &kp LCTRL>
                 , <&macro_press &kp LALT>
                 , <&macro_tap &kp TAB>
-                , <&macro_press &kp LALT>
+                , <&macro_release &kp LALT>
                 , <&macro_release &kp LCTRL>
                 ;
         };

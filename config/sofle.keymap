@@ -41,11 +41,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1  &kp N2      &kp N3      &kp N4      &kp N5                          &kp UP                      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp LBKT
-&kp TAB     &kp Q   &kp W       &kp E       &kp R       &kp T                           &kp DOWN                    &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RBKT
-&kp BSPC    &kp A   &kp S       &kp D       &kp F       &kp G                           &kp LEFT                    &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z   &kp X       &kp C       &kp V       &kp B                           &kp RIGHT                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHIFT
-&kp C_MUTE          &kp LGUI    &kp LCTRL   &kp LALT    &kp SPACE   &mo 1               &mo 2           &kp RALT    &kp ENTER   &kp RCTRL   &kp MINUS   &kp EQUAL
+&kp ESC     &kp N1  &kp N2      &kp N3      &kp N4      &kp N5              &kp UP                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp LBKT
+&kp TAB     &kp Q   &kp W       &kp E       &kp R       &kp T               &kp DOWN                &kp Y       &kp U       &kp I       &kp O       &kp P       &kp RBKT
+&kp BSPC    &kp A   &kp S       &kp D       &kp F       &kp G               &kp LEFT                &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp APOS
+&kp LSHFT   &kp Z   &kp X       &kp C       &kp V       &kp B               &kp RIGHT               &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHIFT
+&kp C_MUTE          &kp LGUI    &kp LCTRL   &kp LALT    &kp SPACE   &mo 1   &mo 2       &kp RALT    &kp ENTER   &kp RCTRL   &kp MINUS   &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -54,11 +54,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1          &kp F2  &kp F3      &kp F4              &kp F5          &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
-&kp BSLH    &kp C_AC_BACK   &trans  &trans      &kp C_AC_FORWARD    &kp F10         &mmv MOVE_DOWN          &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans          &trans          &trans
-&kp DELETE  &kp HOME        &trans  &trans      &kp END             &kp F11         &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
-&trans      &kp LEFT        &kp UP  &kp DOWN    &kp RIGHT           &kp F12         &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans          &trans          &bootloader
-&trans                      &trans  &trans      &trans              &trans  &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
+&kp GRAVE   &kp F1      &kp F2  &kp F3  &kp F4     &kp F5           &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
+&kp BSLH    &kp UP      &trans  &trans  &kp DOWN   &kp F10          &mmv MOVE_DOWN          &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans          &trans          &trans
+&kp DELETE  &kp LEFT    &trans  &trans  &kp RIGHT  &kp F11          &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
+&trans      &kp HOME    &trans  &trans  &kp END    &kp F12          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans          &trans          &bootloader
+&trans                  &trans  &trans  &trans     &trans   &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
             >;
 
             display-name = "layer1";

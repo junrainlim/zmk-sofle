@@ -97,8 +97,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mmv MOVE_UP>
-                , <&macro_tap &mmv MOVE_LEFT>
+                = <&macro_press &mmv MOVE_UP>
+                , <&macro_press &mmv MOVE_LEFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mmv MOVE_UP>
+                , <&macro_release &mmv MOVE_LEFT>
                 ;
         };
 
@@ -106,8 +109,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mmv MOVE_UP>
-                , <&macro_tap &mmv MOVE_RIGHT>
+                = <&macro_press &mmv MOVE_UP>
+                , <&macro_press &mmv MOVE_RIGHT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mmv MOVE_UP>
+                , <&macro_release &mmv MOVE_RIGHT>
                 ;
         };
 
@@ -115,8 +121,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mmv MOVE_DOWN>
-                , <&macro_tap &mmv MOVE_LEFT>
+                = <&macro_press &mmv MOVE_DOWN>
+                , <&macro_press &mmv MOVE_LEFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mmv MOVE_DOWN>
+                , <&macro_release &mmv MOVE_LEFT>
                 ;
         };
 
@@ -124,8 +133,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &mmv MOVE_DOWN>
-                , <&macro_tap &mmv MOVE_RIGHT>
+                = <&macro_press &mmv MOVE_DOWN>
+                , <&macro_press &mmv MOVE_RIGHT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mmv MOVE_DOWN>
+                , <&macro_release &mmv MOVE_RIGHT>
                 ;
         };
     };

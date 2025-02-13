@@ -17,7 +17,7 @@
     behaviors {
         mmv {
             acceleration-exponent = <1>;        // 1
-            time-to-max-speed-ms = <200>;       // 0
+            time-to-max-speed-ms = <0>;         // 0
             delay-ms = <0>;                     // 0
         };
 
@@ -55,9 +55,9 @@
         layer_1 {
             bindings = <
 &kp GRAVE   &kp F1      &kp F2  &kp F3  &kp F4     &kp F5           &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
-&kp BSLH    &kp UP      &trans  &trans  &kp DOWN   &kp F10          &mmv MOVE_DOWN          &msc SCRL_UP    &trans          &mmv MOVE_UP    &trans          &trans          &trans
+&kp BSLH    &kp UP      &trans  &trans  &kp DOWN   &kp F10          &mmv MOVE_DOWN          &msc SCRL_UP    &nw             &mmv MOVE_UP    &ne             &trans          &trans
 &kp DELETE  &kp LEFT    &trans  &trans  &kp RIGHT  &kp F11          &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
-&trans      &kp HOME    &trans  &trans  &kp END    &kp F12          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT      &trans          &trans          &bootloader
+&trans      &kp HOME    &trans  &trans  &kp END    &kp F12          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &sw             &kp INSERT      &se             &trans          &bootloader
 &trans                  &trans  &trans  &trans     &trans   &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
             >;
 
@@ -67,11 +67,11 @@
 
         layer_2 {
             bindings = <
-&trans      &trans      &trans      &trans      &trans       &trans                             &trans                 &trans  &trans  &trans      &trans     &trans       &trans
-&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_DOWN         &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_LEFT         &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans      &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI   &mmv MOVE_RIGHT        &trans  &trans  &sys_reset  &soft_off  &bootloader  &bootloader
-&trans      &trans      &trans      &trans      &trans       &trans                             &mkp LCLK       &trans &trans  &trans  &trans       &trans
+&trans      &trans      &trans      &trans      &trans       &trans                             &trans                  &trans  &trans  &trans      &trans     &trans       &trans
+&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_DOWN          &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
+&trans      &trans      &trans      &trans      &trans       &trans                             &mmv MOVE_LEFT          &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+&trans      &rgb_ug RGB_OFF &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI   &mmv MOVE_RIGHT         &trans  &trans  &sys_reset  &soft_off  &bootloader  &bootloader
+&trans      &trans      &trans      &trans      &trans       &trans                             &mkp LCLK       &trans  &trans  &trans  &trans      &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -90,6 +90,42 @@
                 , <&macro_tap &kp TAB>
                 , <&macro_release &kp LALT>
                 , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        nw: nw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mmv MOVE_UP>
+                , <&macro_press &mmv MOVE_LEFT>
+                ;
+        };
+
+        ne: ne {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mmv MOVE_UP>
+                , <&macro_press &mmv MOVE_RIGHT>
+                ;
+        };
+
+        sw: sw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mmv MOVE_DOWN>
+                , <&macro_press &mmv MOVE_LEFT>
+                ;
+        };
+
+        se: se {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mmv MOVE_DOWN>
+                , <&macro_press &mmv MOVE_RIGHT>
                 ;
         };
     };

@@ -54,11 +54,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1      &kp F2  &kp F3  &kp F4     &kp F5           &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
-&kp BSLH    &kp UP      &trans  &trans  &kp DOWN   &kp F10          &mmv MOVE_DOWN          &msc SCRL_UP    &nw             &mmv MOVE_UP    &ne             &trans          &trans
-&kp DELETE  &kp LEFT    &trans  &trans  &kp RIGHT  &kp F11          &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
-&trans      &kp HOME    &trans  &trans  &kp END    &kp F12          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &sw             &kp INSERT      &se             &trans          &bootloader
-&trans                  &trans  &trans  &trans     &trans   &trans  &mkp LCLK       &trans  &mkp LCLK       &mkp RCLK       &mkp MCLK       &trans
+&kp GRAVE   &kp F1      &kp F2      &kp F3      &kp F4     &kp F5           &mmv MOVE_UP            &kp F6          &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
+&kp BSLH    &kp UP      &trans      &trans      &kp DOWN   &kp F10          &mmv MOVE_DOWN          &msc SCRL_UP    &nw             &mmv MOVE_UP    &ne             &trans          &trans
+&kp DELETE  &kp LEFT    &trans      &trans      &kp RIGHT  &kp F11          &mmv MOVE_LEFT          &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &ctrl_alt_tab   &trans
+&trans      &kp HOME    &kp PG_UP   &kp PG_DN   &kp END    &kp F12          &mmv MOVE_RIGHT         &rgb_ug RGB_BRI &sw             &kp INSERT      &se             &trans          &bootloader
+&trans                  &trans      &trans      &trans     &trans   &trans  &mkp LCLK       &trans  &mkp LCLK       &trans          &mkp RCLK       &mkp MCLK 
             >;
 
             display-name = "layer1";
